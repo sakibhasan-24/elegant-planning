@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "serviceName": "Wedding Consultation",
+    "image": "https://i.ibb.co/SRq8PF3/wedding-Planning.jpg",
+    "title": "Dream Day Package",
+    "category": "Consultation",
+    "offer": true,
+    "price": "$1,500",
+    "description": "Embark on the journey to your dream day with our personalized wedding consultation. Our experienced consultants will guide you through every detail, ensuring your wedding day is nothing short of magical. From theme selection to vendor coordination, we've got you covered.",
+    "interestingFacts": "Our consultants have over 10 years of experience in creating magical weddings.",
+    "additionalService": null,
+    "contactInfo": {
+      "phone": "123-456-7890",
+      "email": "info@dreamdayconsultation.com"
+    }
+  },
+  {
+    "id": 2,
+    "serviceName": "Honeymoon Planning",
+    "image": "https://i.ibb.co/qpdg7Dw/everton-vila-Asah-Nl-C0-Vh-Q-unsplash.jpg",
+    "title": "Romantic Retreat Package",
+    "category": "Honeymoon",
+    "offer": true,
+    "price": "$Varies",
+    "description": "Indulge in the romance of a lifetime with our tailored honeymoon planning services. From exotic destinations to culinary delights, we create a perfect escape for you and your loved one. Our package includes not only travel arrangements but also a delightful food experience to enhance your romantic getaway.",
+    "interestingFacts": "We specialize in curating dreamy honeymoon experiences in exotic destinations.",
+    "additionalService": "Complimentary romantic dinner for two.",
+    "contactInfo": {
+      "phone": "456-789-0123",
+      "email": "info@romantichoneymoons.com"
+    }
+  },
+  {
+    "id": 3,
+    "serviceName": "Stationary Design",
+    "image": "https://i.ibb.co/J3nR732/thomas-ae-n7-L-kp4h-m0-unsplash.jpg",
+    "title": "Elegant Invitations Suite",
+    "category": "Design",
+    "offer": true,
+    "price": "$500",
+    "description": "Set the tone for your special day with our Elegant Invitations Suite. Our designers craft custom wedding stationary, ensuring a cohesive and timeless theme for your wedding celebration. We go beyond invitations, providing additional services like personalized monogram design for the couple.",
+    "interestingFacts": "Our designers blend creativity with sophistication for timeless invitations.",
+    "additionalService": "Custom monogram design for the couple.",
+    "contactInfo": {
+      "phone": "789-012-3456",
+      "email": "info@elegantinvitations.com"
+    }
+  },
+  {
+    "id": 4,
+    "serviceName": "Transportation Design",
+    "image": "https://i.ibb.co/Z8qP1YD/wedding-transportation-service-Raleigh-Durham-Morrisville-Cary-Chapel-Hill-Wake-Forest-Nort-Hills-Sm.jpg",
+    "title": "Luxury Carriage Service",
+    "category": "Transportation",
+    "offer": true,
+    "price": "$800",
+    "description": "Make a grand entrance with our Luxury Carriage Service. Choose from our fleet of luxury cars and add a touch of glamour to your wedding day transportation, creating unforgettable memories. To elevate your experience, we offer an additional service of champagne service during the ride.",
+    "interestingFacts": "Choose from our fleet of luxury cars to add a touch of glamour to your wedding.",
+    "additionalService": "Champagne service during the ride.",
+    "contactInfo": {
+      "phone": "234-567-8901",
+      "email": "info@luxurycarriages.com"
+    }
+  },
+  {
+    "id": 5,
+    "serviceName": "Photography and Video Design",
+    "image": "https://i.ibb.co/7zvBNxn/weddingphoto.webp",
+    "title": "Captured Moments Package",
+    "category": "Photography",
+    "offer": false,
+    "price": "$Varies",
+    "description": "Relive the magic of your wedding day with our Captured Moments Package. Our professional team uses the latest technology to create cinematic wedding films and capture every special moment. As an additional service, we include an engagement photo session to add more memories to your collection.",
+    "interestingFacts": "Our team uses the latest technology to create cinematic wedding films.",
+    "additionalService": "Engagement photo session included.",
+    "contactInfo": {
+      "phone": "345-678-9012",
+      "email": "info@capturedmoments.com"
+    }
+  },
+  {
+    "id": 6,
+    "serviceName": "Elegant planner ",
+    "image": "https://i.ibb.co/vV3VHq7/andy-holmes-cbe2y8-SK2-Xc-unsplash.jpg",
+    "title": "Design By Event Management",
+    "category": "event",
+    "offer": true,
+    "price": "$7000",
+    "description": "we will design it by Our Own.Here We offer all service including food,design and transport.also we will consult with owner for any suggestions.we will arrange entertainment also",
+    "interestingFacts": "Our consultants have an eye for detail, ensuring the perfect fit for your dream gown.",
+    "additionalService": "Complimentary veil with dress purchase.",
+    "contactInfo": {
+      "phone": "456-789-0123",
+      "email": "info@bridalcouture.com"
+    }
+  },
+  {
+    "id": 7,
+    "serviceName": "Catering",
+    "image": "https://i.ibb.co/bKp49Zy/wedding-catering.jpg",
+    "title": "Exquisite Culinary Delights",
+    "category": "Catering",
+    "offer": true,
+    "price": "3550",
+    "description": "Delight your guests with our Exquisite Culinary Delights. Our chefs create tailored menus, blending flavors with elegance to enhance the culinary experience of your wedding celebration. As an additional service, enjoy a customized wedding cake to sweeten the occasion.",
+    "interestingFacts": "Our chefs are known for creating menus that blend flavors with elegance.",
+    "additionalService": "Customized wedding cake included.",
+    "contactInfo": {
+      "phone": "567-890-1234",
+      "email": "info@culinarydelights.com"
+    }
+  },
+  {
+    "id": 8,
+    "serviceName": "Venue Selection",
+    "image": "https://i.ibb.co/qkdYWb1/venue.jpg",
+    "title": "Enchanted Venue Discovery",
+    "category": "Venue",
+    "offer": false,
+    "price": "4000",
+    "description": "Embark on a journey to find the perfect venue with our Enchanted Venue Discovery. From historic landmarks to picturesque outdoor locations, we offer assistance in selecting the ideal setting for your magical day.",
+    "interestingFacts": "We have a curated list of venues, from historic landmarks to picturesque outdoor locations.",
+    "additionalService": "we will adjust remaining amount(if save) and we will provide transport facilities",
+    "contactInfo": {
+      "phone": "678-901-2345",
+      "email": "info@venueenchantment.com"
+    }
+  }
+]
