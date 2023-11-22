@@ -1,8 +1,22 @@
+import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
+import { toast } from "react-toastify";
 
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then((user) => {
+        toast.success(user.displayName + "logOut");
+      })
+      .catch((e) => {
+        toast.error(e.message);
+      });
+  };
+  // console.log("nav", user);
   const handleMoveRoute = (route) => {
     if (location.pathname === route) return true;
   };
@@ -25,22 +39,48 @@ export default function Navbar() {
         >
           About
         </Link>
-        <Link
-          className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
-            handleMoveRoute("/login") && "bg-purple-900 px-2 font-extrabold"
-          }`}
-          to="/login"
-        >
-          Login
-        </Link>
-        <Link
-          className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
-            handleMoveRoute("/register") && "bg-purple-900 px-2 font-extrabold"
-          }`}
-          to="/register"
-        >
-          Register
-        </Link>
+        {user ? (
+          <>
+            <Link
+              className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
+                handleMoveRoute("/profile") &&
+                "bg-purple-900 px-2 font-extrabold"
+              }`}
+              to="/profile"
+            >
+              Profile
+            </Link>
+            <Link
+              onClick={handleLogOut}
+              className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
+                handleMoveRoute("/login") && "bg-purple-900 px-2 font-extrabold"
+              }`}
+              to="/login"
+            >
+              Logout
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link
+              className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
+                handleMoveRoute("/login") && "bg-purple-900 px-2 font-extrabold"
+              }`}
+              to="/login"
+            >
+              Login
+            </Link>
+            <Link
+              className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
+                handleMoveRoute("/register") &&
+                "bg-purple-900 px-2 font-extrabold"
+              }`}
+              to="/register"
+            >
+              Register
+            </Link>
+          </>
+        )}
       </div>
     </nav>
   );

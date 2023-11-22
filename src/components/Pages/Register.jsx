@@ -1,7 +1,29 @@
+import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
+import { toast } from "react-toastify";
 
 export default function Register() {
+  const { createUserOnGoogle } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleGoogleSignIn = () => {
+    createUserOnGoogle()
+      .then((res) => {
+        const userInfo = res.user;
+        // console.log(userInfo);
+        toast.success(
+          `${
+            userInfo?.displayName ? userInfo.displayName : "unknown"
+          } user successfully found`
+        );
+        navigate("/");
+      })
+      .catch((e) => {
+        // console.log(e.message);
+        toast.error(e.message);
+      });
+  };
   return (
     <div className="w-full mx-0 md:max-w-2xl md:mx-auto">
       <h1 className="text-center font-semibold text-gray-500 text-2xl my-6">
@@ -40,6 +62,7 @@ export default function Register() {
         />
 
         <button
+          onClick={handleGoogleSignIn}
           className="flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-2 rounded-md mx-auto my-4"
           type="button"
         >
