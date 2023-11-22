@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "logo": "https://immigrantinvest.com/wp-content/uploads/2022/03/best-banks-2021-40543452.jpg",
+    "bankingMethodName": "Secure Bank",
+    "facilities": ["Online Banking", "ATM Services", "Mobile App"],
+    "countrywiseaccess": ["United States", "Canada", "United Kingdom"]
+  },
+  {
+    "id": 2,
+    "logo": "https://1000logos.net/wp-content/uploads/2021/04/Paypal-logo.png",
+    "bankingMethodName": "Paypal",
+    "facilities": [
+      "International Wire Transfers",
+      "Savings Accounts",
+      "Credit Cards"
+    ],
+    "countrywiseaccess": ["Australia", "Germany", "Japan"]
+  },
+  {
+    "id": 3,
+    "logo": "https://images.fastcompany.net/image/upload/w_1200,c_limit,q_auto:best/wp-cms/uploads/2023/04/i-3-90885664-mastercard-logo.jpg",
+    "bankingMethodName": "MasterCard",
+    "facilities": ["Online Payments", "Bill Pay", "Mobile Wallet"],
+    "countrywiseaccess": ["India", "Brazil", "South Africa"]
+  }
+]
