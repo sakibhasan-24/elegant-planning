@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 
 export default function Banner() {
   AOS.init({
-    duration: 1200,
+    duration: 1800,
   });
   return (
     <section className="lg:my-2  bg-gradient-to-r from-blue-800 to-blue-500 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 items-center justify-between">
