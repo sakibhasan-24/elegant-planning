@@ -10,7 +10,7 @@ export default function Navbar() {
   const handleLogOut = () => {
     logOut()
       .then((user) => {
-        toast.success(user.displayName + "logOut");
+        if (user) toast.success(user.displayName + "logOut");
       })
       .catch((e) => {
         toast.error(e.message);
@@ -50,15 +50,17 @@ export default function Navbar() {
             >
               Profile
             </Link>
-            <Link
-              onClick={handleLogOut}
-              className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
-                handleMoveRoute("/login") && "bg-purple-900 px-2 font-extrabold"
-              }`}
-              to="/login"
-            >
-              Logout
-            </Link>
+            <button onClick={handleLogOut}>
+              <Link
+                className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${
+                  handleMoveRoute("/login") &&
+                  "bg-purple-900 px-2 font-extrabold"
+                }`}
+                to="/login"
+              >
+                Logout
+              </Link>
+            </button>
           </>
         ) : (
           <>
