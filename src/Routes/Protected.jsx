@@ -7,7 +7,6 @@ export default function Protected({ children }) {
   const location = useLocation();
   const { loading, user } = useContext(AuthContext);
 
-  console.log(location);
   if (loading) {
     return <Spinner />;
   }

@@ -8,7 +8,7 @@ export default function Payment({ payment }) {
   return (
     <section
       data-aos="fade-top"
-      className="shadow-2xl px-4 py-3 border-4 bg-lime-800 font-semibold"
+      className="shadow-2xl rounded-md px-3 lg:px-4 md:px-4 py-3 border-4 bg-lime-900 font-semibold"
     >
       <div className="w-full">
         <img className="w-full rounded-md" src={logo} alt="img" />
@@ -16,7 +16,6 @@ export default function Payment({ payment }) {
       <div className=" my-8">
         <div>
           <h1 className=" text-center textl-xl">
-            {" "}
             you can pay through {bankingMethodName}
           </h1>
           <h1 className="bg-green-950 text-white px-4 py-2 rounded-lg text-center w-1/2 mx-auto my-4">

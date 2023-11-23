@@ -37,6 +37,7 @@ export default function AuthProvider({ children }) {
   //   update a profile
   const updateUserProfile = (name, photoUrl) => {
     setLoading(true);
+    setLoading(false);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: photoUrl,

@@ -25,3 +25,8 @@
 * toggle then
 * spinner
 * prevent unauthorized user
+
+## two protected route
+
+- profile
+- about

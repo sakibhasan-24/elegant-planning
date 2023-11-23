@@ -10,10 +10,10 @@ export default function Services() {
   }, []);
   return (
     <div className="max-w-6xl mx-auto my-10">
-      <h1 className="text-center font-semibold text-2xl">
-        Our <span className="text-orange-500">Service</span>
+      <h1 className="text-center font-semibold my-6 text-2xl">
+        Our <span className="text-orange-500 ">Service</span>
       </h1>
-      <section className="grid lg:grid-cols-4 gap-4">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {services.map((service) => (
           <Service key={service.id} service={service} />
         ))}

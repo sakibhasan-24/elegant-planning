@@ -13,7 +13,7 @@ export default function Footer() {
         <p>elegantPlanning@gmail.com</p>
         <p>+8888 999 88</p>
       </div>
-      <div className="flex justify-evenly my-6 items-center">
+      <div className="text-xs flex flex-nowrap md:flex-row  lg:flex-row justify-between lg:justify-evenly my-6 items-center">
         <ul className="flex flex-col font-bold space-y-4">
           <li>Elegant Design</li>
           <li>Cost Friendly</li>

@@ -3,7 +3,7 @@ import { GiSelfLove, GiPartyPopper } from "react-icons/gi";
 
 export default function Experience() {
   return (
-    <section className="max-w-6xl mx-auto my-8">
+    <section className=" mx-auto lg:max-w-6xl md:max-w-4xl lg:mx-auto md:mx-auto my-8">
       <h1 className="text-center text-4xl font-bold">Our Experience</h1>
       <div>
         {/* card One */}
@@ -16,7 +16,7 @@ export default function Experience() {
             <p className="text-lg font-semibold text-center">
               We Give Our Service All Over The World .We have given service.....{" "}
             </p>
-            <div className="flex flex-col md:flex-row gap-4 text-center">
+            <div className="flex flex-col md:flex-row flex-wrap gap-2 text-center">
               <span className="bg-purple-700 px-4 whitespace-nowrap ">
                 Australia
               </span>
@@ -38,7 +38,7 @@ export default function Experience() {
             <p className="text-lg font-semibold text-center">
               We Give Our Service All Over The World .We have given service.....
             </p>
-            <div className="flex flex-col md:flex-row gap-4 text-center">
+            <div className="flex flex-col md:flex-row flex-wrap gap-2 text-center">
               <span className="bg-purple-700 px-4 whitespace-nowrap ">
                 Cox's Bazar
               </span>
@@ -57,7 +57,7 @@ export default function Experience() {
               {" "}
               We Give Our Service All Over The World .We have given service.....
             </p>
-            <div className="flex flex-col md:flex-row gap-4 text-center">
+            <div className="flex flex-col md:flex-row flex-wrap gap-2 text-center">
               <span className="bg-purple-700 px-4 whitespace-nowrap ">
                 Live Music
               </span>

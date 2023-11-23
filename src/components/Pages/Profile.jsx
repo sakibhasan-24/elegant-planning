@@ -1,21 +1,23 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
-import Spinner from "../Spinner";
+
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 export default function Profile() {
   const { user, loading, updateUserProfile } = useContext(AuthContext);
   //   console.log(user?.displayName);
-
   const navigate = useNavigate();
-  if (loading) {
-    return <Spinner />;
-  }
+
   const handleProfile = (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const displayName = formData.get("name");
-    const photoUrl = formData.get("photoURL");
+    const photoUrl =
+      formData.get("photoURL") ||
+      "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg";
+    if (displayName.length === 0 || photoUrl.length === 0) {
+      return toast.error("no update");
+    }
     updateUserProfile(displayName, photoUrl)
       .then((data) => {
         toast.success("update Done   ");
