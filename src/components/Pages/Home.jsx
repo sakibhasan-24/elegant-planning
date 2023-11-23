@@ -3,6 +3,7 @@ import Header from "./Header";
 import Banner from "./Banner";
 import Experience from "./Experience";
 import Payments from "./Payments";
+import Footer from "../Footer";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
 
       <Outlet />
+      <Footer />
     </>
   );
 }
