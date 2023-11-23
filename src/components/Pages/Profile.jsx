@@ -3,10 +3,10 @@ import { AuthContext } from "../../context/AuthProvider";
 import Spinner from "../Spinner";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
 export default function Profile() {
   const { user, loading, updateUserProfile } = useContext(AuthContext);
   //   console.log(user?.displayName);
+
   const navigate = useNavigate();
   if (loading) {
     return <Spinner />;
