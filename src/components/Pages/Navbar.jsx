@@ -2,11 +2,15 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import { toast } from "react-toastify";
+import { FaUserAlt } from "react-icons/fa";
 
 export default function Navbar() {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
   const navigate = useNavigate();
   const location = useLocation();
-  const { user, logOut } = useContext(AuthContext);
+  // const image if not found
+
   const handleLogOut = () => {
     logOut()
       .then((user) => {
@@ -39,6 +43,7 @@ export default function Navbar() {
         >
           About
         </Link>
+        {/* condition based on Login */}
         {user ? (
           <>
             <Link
@@ -49,6 +54,23 @@ export default function Navbar() {
               to="/profile"
             >
               Profile
+            </Link>
+            <Link
+              className={`  ${
+                handleMoveRoute("/profile") &&
+                "bg-purple-900 px-2 font-extrabold"
+              }`}
+              to="/profile"
+            >
+              {user?.photoURL ? (
+                <img
+                  className="w-[30px] h-[30px] rounded-full"
+                  src={user.photoURL}
+                  alt="photo"
+                />
+              ) : (
+                <FaUserAlt />
+              )}
             </Link>
             <button onClick={handleLogOut}>
               <Link

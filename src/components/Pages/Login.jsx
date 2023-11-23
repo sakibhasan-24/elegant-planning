@@ -36,7 +36,7 @@ export default function Login() {
     //hanlde login
     logIn(email, password)
       .then((currentUser) => {
-        console.log(currentUser.user.email);
+        // console.log(currentUser.user);
         if (currentUser.user.email !== email) {
           return toast.error("email does  not found");
         }

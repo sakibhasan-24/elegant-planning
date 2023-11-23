@@ -41,6 +41,7 @@ export default function AuthProvider({ children }) {
       if (!currentUser) {
         console.log("no user We have");
       }
+      console.log(currentUser.photoURL);
       setUser(currentUser);
       setLoading(false);
     });
