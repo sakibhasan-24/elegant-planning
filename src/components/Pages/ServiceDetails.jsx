@@ -4,16 +4,24 @@ import { AuthContext } from "../../context/AuthProvider";
 import Spinner from "../Spinner";
 
 export default function ServiceDetails() {
-  const { loading } = useContext(AuthContext);
+  //   const { loading } = useContext(AuthContext);
   const { id } = useParams();
-  if (loading) {
+  const [services, setServices] = useState([]);
+
+  //   const services = useLoaderData();
+  useEffect(() => {
+    fetch("/services.json")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
+  //   console.log(services);
+  const newService = services?.find((service) => service.id == id);
+  //   const [singleService, setSingleService] = useState(services);
+  //   const newService = services?.find((service) => service.id == id);
+
+  if (!newService) {
     return <Spinner />;
   }
-  const services = useLoaderData();
-  console.log(services);
-
-  //   const [singleService, setSingleService] = useState(services);
-  const newService = services?.find((service) => service.id == id);
   const {
     title,
     interestingFacts,
@@ -26,6 +34,7 @@ export default function ServiceDetails() {
     price,
     contactInfo,
   } = newService;
+
   //   console.log(newService);
   return (
     <section className="my-12 max-w-3xl mx-auto">

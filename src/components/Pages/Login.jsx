@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { FaGoogle } from "react-icons/fa6";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import { toast } from "react-toastify";
 
 export default function Login() {
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location.state);
   const { createUserOnGoogle, logIn } = useContext(AuthContext);
   // google signIn method
   const handleGoogleSignIn = () => {
@@ -13,12 +15,13 @@ export default function Login() {
       .then((res) => {
         const userInfo = res.user;
         // console.log(userInfo);
+        navigate(`${location?.state ? location.state : "/"}`);
         toast.success(
           `${
             userInfo?.displayName ? userInfo.displayName : "unknown"
           }  successfully found`
         );
-        navigate("/");
+        // console.log(location.state);
       })
       .catch((e) => {
         // console.log(e.message);
@@ -41,6 +44,7 @@ export default function Login() {
           return toast.error("email does  not found");
         }
         toast.success("welcome Back");
+        // where he /she wnats to go send here
         navigate("/");
       })
       .catch((e) => {

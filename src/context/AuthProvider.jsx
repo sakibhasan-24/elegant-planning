@@ -19,7 +19,6 @@ export default function AuthProvider({ children }) {
   const createUserOnGoogle = () => {
     const googleAuthProvider = new GoogleAuthProvider();
     setLoading(true);
-
     return signInWithPopup(auth, googleAuthProvider);
   };
 
@@ -30,10 +29,12 @@ export default function AuthProvider({ children }) {
   };
   //   signIn
   const logIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const logOut = () => {
+    setUser(null);
     return signOut(auth);
   };
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function AuthProvider({ children }) {
       if (!currentUser) {
         console.log("no user We have");
       }
-      console.log(currentUser.photoURL);
+      //   console.log(currentUser.photoURL);
       setUser(currentUser);
       setLoading(false);
     });

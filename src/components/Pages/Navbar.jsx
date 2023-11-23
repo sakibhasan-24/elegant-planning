@@ -12,9 +12,10 @@ export default function Navbar() {
   // const image if not found
 
   const handleLogOut = () => {
+    // console.log("cl");
     logOut()
       .then((user) => {
-        if (user) toast.success(user.displayName + "logOut");
+        toast.success("successufully Logout");
       })
       .catch((e) => {
         toast.error(e.message);
@@ -44,7 +45,7 @@ export default function Navbar() {
           About
         </Link>
         {/* condition based on Login */}
-        {user ? (
+        {user?.email ? (
           <>
             <Link
               className={`hover:bg-yellow-950 hover:rounded-md hover:text-white hover:px-4 hover:py-1 transition-all duration-300 ${

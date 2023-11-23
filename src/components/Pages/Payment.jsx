@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 export default function Payment({ payment }) {
   AOS.refresh();
   const { bankingMethodName, logo, facilities, countrywiseaccess } = payment;
-  console.log(countrywiseaccess);
+  // console.log(countrywiseaccess);
   return (
     <section
       data-aos="fade-top"

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Service({ service }) {
-  console.log(service);
+  //   console.log(service);
   const {
     title,
     interestingFacts,
@@ -15,6 +15,7 @@ export default function Service({ service }) {
     price,
     contactInfo,
   } = service;
+
   return (
     <div className="w-full shadow-xl bg-gray-200 py-1 px-2 relative rounded-lg">
       <div className="w-full mx-auto">

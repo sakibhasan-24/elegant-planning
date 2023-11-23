@@ -6,6 +6,8 @@ import About from "../components/Pages/About";
 
 import HomeComponents from "../components/Pages/HomeComponents";
 import ServiceDetails from "../components/Pages/ServiceDetails";
+import Protected from "./Protected";
+import Profile from "../components/Pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -23,9 +25,21 @@ const router = createBrowserRouter([
       {
         path: "/services/:category/:id",
         loader: async () => await fetch("services.json"),
-        element: <ServiceDetails />,
+        element: (
+          <Protected>
+            <ServiceDetails />
+          </Protected>
+        ),
       },
       { path: "/register", element: <Register /> },
+      {
+        path: "/profile",
+        element: (
+          <Protected>
+            <Profile />
+          </Protected>
+        ),
+      },
     ],
   },
   //
