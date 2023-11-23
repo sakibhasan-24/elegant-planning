@@ -1,14 +1,28 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import Spinner from "../Spinner";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Profile() {
-  const { user, loading } = useContext(AuthContext);
-  console.log(user?.displayName);
-  if (!user) {
+  const { user, loading, updateUserProfile } = useContext(AuthContext);
+  //   console.log(user?.displayName);
+  const navigate = useNavigate();
+  if (loading) {
     return <Spinner />;
   }
+  const handleProfile = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const displayName = formData.get("name");
+    const photoUrl = formData.get("photoURL");
+    updateUserProfile(displayName, photoUrl)
+      .then((data) => {
+        toast.success("update Done   ");
+        navigate("/");
+      })
+      .catch((e) => toast.error("something went Wrong!"));
+  };
   return (
     <section className="max-w-xl mx-auto my-10 ">
       <h1 className="text-center">{user?.displayName} Profile</h1>
@@ -39,7 +53,10 @@ export default function Profile() {
           </Link>
         </button>
       </div>
-      <form className="max-w-xl mx-auto shadow-lg px-4 my-6 flex flex-col gap-4 items-center">
+      <form
+        onSubmit={handleProfile}
+        className="max-w-xl mx-auto shadow-lg px-4 my-6 flex flex-col gap-4 items-center"
+      >
         <input
           className="w-full px-4 py-2 border-2 border-yellow-600 rounded-lg"
           type="text"
@@ -55,7 +72,6 @@ export default function Profile() {
           placeholder="PhotoUrl"
         />
         <input
-          c
           type="submit"
           value="Update Profile"
           className="bg-green-600 font-bold my-6 px-4 py-2 rounded-md cursor-pointer"
