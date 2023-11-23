@@ -1,5 +1,7 @@
 # React + Router + Firebase + tailwind css
 
+### live link: https://elegant-planning-77809.web.app/
+
 - set up all necessary tools
 
 * create a json file
